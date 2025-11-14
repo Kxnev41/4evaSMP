@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thornridge Server</title>
+  <title>The 4eva SMP</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -199,7 +199,6 @@
     <h1>Thornridge</h1>
     <ul>
       <li><a href="#about">About</a></li>
-      <li><a href="#lore">Lore</a></li>
       <li><a href="#rules">Rules</a></li>
       <li><a href="#mods">Mods</a></li>
       <li><a href="#join">Join</a></li>
@@ -213,23 +212,15 @@
   </header>
 
   <section id="about">
-    <h2>About Thornridge</h2>
-    <p>Thornridge is a living modded world where survival meets storytelling. 
-      Explore the city, uncover ruins, and shape your destiny among friends and rivals.
+    <h2>About the 4eva SMP</h2>
+    <p>The 4eva SMP is a survival multiplayer server. 
+      Start with nothing, survive the wild, build epic bases, make friends or rivals, and leave your legend!
     </p>
   </section>
 
-  <section id="lore">
-    <h2>Lore</h2>
-    <p>Thornridge, nestled between small mountains and rivers, isn't the biggest city in ,,Minecraftia" - but atleast it exists, right? 
-      Built from old stone, wood, and tradition, it's a mix of modern progress and countryside peace. Founded a few generations ago by Bistrica Miteva as a mining and trading village, 
-      Thornridge slowly grew into the administrative and cultural capital of ,,Minecraftia". It's where decisions are made and stories begin. Thornridge is cozy, historic, and alive with stories. 
-      No towering skyscrapers which make you anxious when they're gonna fall, just well-built town halls, houses and gardens full of life. At sunrise, the streets glow soft pink from the cherry trees. 
-      At night, lanterns flicker across all of the streets, roads and boulevards. 
-      Locals are proud - every brick and blossom tells part of their city's story. Notable places - Central Plaza - Ivanev Memorial Museum
-      "Not vast, but lasting."</p>
-  </section>
 
+
+  
   <section id="rules">
     <h2>Rules</h2>
     <ul>
@@ -241,48 +232,36 @@
     </ul>
   </section>
 
-  <section id="mods">
-    <h2>Required Mods</h2>
-    <p>To join Thornridge, install the following mods (Forge 1.20.1 recommended):</p>
-    <ul class="mods-grid">
-<ul>
-  <li><a href="/architectury-9.2.14-fabric.jar" download>Architectury API</a></li>
-  <li><a href="/cloth-config-11.1.136-fabric.jar" download>Cloth Config</a></li>
-  <li><a href="/coroutil-fabric-1.20.1-1.3.7.jar" download>Coroutil (Forge)</a></li>
-  <li><a href="/cropsneedsky-mc1.20.1-1.1.0.jar" download>Crops Need Sky</a></li>
-  <li><a href="/framework-fabric-1.20.1-0.7.15.jar" download>Framework (MrCrayfish)</a></li>
-  <li><a href="/refurbished_furniture-fabric-1.20.1-1.0.20.jar" download>MrCrayfish’s Furniture Refurbished</a></li>
-  <li><a href="/watut-fabric-1.20.1-1.2.3.jar" download>WATUT</a></li>
-  <li><a href="/mcw-bridges-3.1.0-mc1.20.1fabric.jar" download>Macaw’s Bridges</a></li>
-  <li><a href="/mcw-doors-1.1.2-mc1.20.1fabric.jar" download>Macaw’s Doors</a></li>
-  <li><a href="/mcw-mcwwindows-2.4.1-mc1.20.1fabric.jar" download>Macaw’s Windows</a></li>
-  <li><a href="/mcw-fences-1.2.0-1.20.1fabric.jar" download>Macaw’s Fences and Walls</a></li>
-  <li><a href="/mcw-trapdoors-1.1.4-mc1.20.1fabric.jar" download>Macaw’s Trapdoors</a></li>
-  <li><a href="/mcw-roofs-2.3.2-mc1.20.1fabric.jar" download>Macaw’s Roofs</a></li>
-  <li><a href="/mcw-furniture-3.4.0-mc1.20.1fabric.jar" download>Macaw’s Furniture</a></li>
-  <li><a href="/mcw-lights-1.1.2-mc1.20.1fabric.jar" download>Macaw’s Lights and Lamps</a></li>
-  <li><a href="/mcw-mcwpaths-1.1.1-mc1.20.1fabric.jar" download>Macaw’s Path and Pavings</a></li>
-  <li><a href="/mcw-paintings-1.0.5-1.20.1fabric.jar" download>Macaw’s Paintings</a></li>
-  <li><a href="/mcw-stairs-1.0.1-1.20.1fabric.jar" download>Macaw’s Stairs</a></li>
-  <li><a href="https://www.curseforge.com/minecraft/mc-mods/minecraft-transit-railway/download/7121927" download>Minecraft Transit Railway</a></li>
-  <li><a href="/Saros-Money-Mod.1.20.1-3.5.5.jar" download>Saros Money Mod (GET DEV VERSION FROM CURSEFORGE, THIS LINK DOES NOT WORK!!!)</a></li>
-  <li><a href="/voicechat-fabric-1.20.1-2.6.6.jar" download>Simple Voice Chat</a></li>
-</ul>
->
-    </ul>
-  </section>
+    </section>
+<h2>Players Online: <span id="playerCount">0</span></h2>
+    <script>
+        const serverIP = "4evaSMP.aternos.me"; // replace with your server IP
+
+        async function updatePlayerCount() {
+            try {
+                const res = await fetch(`https://api.mcsrvstat.us/2/${4evaSMP.aternos.me}`);
+                const data = await res.json();
+                document.getElementById('playerCount').innerText = data.online ? data.players.online : 0;
+            } catch {
+                document.getElementById('playerCount').innerText = 0;
+            }
+        }
+
+        updatePlayerCount(); // show immediately
+        setInterval(updatePlayerCount, 30000); // update every 30 seconds
+    </script>
 
   <section id="join">
-    <h2>Join Thornridge</h2>
+    <h2>Join the SMP/h2>
     <p>Ready to begin your journey? Connect using the IP below and start your story.</p>
     <ul>
-      <li><strong>Server IP:</strong> thornridgeOfficial.aternos.me</li>
+      <li><strong>Server IP:</strong> 4evaSMP.aternos.me</li>
       <li><strong>Discord:</strong> <a href="https://discord.gg/EzE67C3H2r">Join our community</a></li>
     </ul>
   </section>
 
   <footer>
-    &copy; 2025 Thornridge RP Server | Made with ♥ by Konstantin Kunev
+    &copy; 2025 The 4evaSMP. | Made with ♥ by Konstantin Kunev
   </footer>
 
   <button id="backToTop">↑</button>
