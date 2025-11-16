@@ -196,7 +196,7 @@
   <canvas id="stars"></canvas>
 
   <nav id="navbar">
-    <h1>Thornridge</h1>
+    <h1>4evaSMP</h1>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#rules">Rules</a></li>
@@ -206,8 +206,8 @@
   </nav>
 
   <header>
-    <h1>Thornridge</h1>
-    <p>A Modded Minecraft Roleplay Server</p>
+    <h1>4evaSMP</h1>
+    <p>A Modded Minecraft SMP</p>
     <a href="#join" class="join-btn">Join the Adventure</a>
   </header>
 
@@ -217,9 +217,6 @@
       Start with nothing, survive the wild, build epic bases, make friends or rivals, and leave your legend!
     </p>
   </section>
-
-
-
   
   <section id="rules">
     <h2>Rules</h2>
@@ -232,31 +229,12 @@
     </ul>
   </section>
 
-    </section>
-<h2>Players Online: <span id="playerCount">0</span></h2>
-    <script>
-        const serverIP = "4evaSMP.aternos.me"; // replace with your server IP
-
-        async function updatePlayerCount() {
-            try {
-                const res = await fetch(`https://api.mcsrvstat.us/2/${4evaSMP.aternos.me}`);
-                const data = await res.json();
-                document.getElementById('playerCount').innerText = data.online ? data.players.online : 0;
-            } catch {
-                document.getElementById('playerCount').innerText = 0;
-            }
-        }
-
-        updatePlayerCount(); // show immediately
-        setInterval(updatePlayerCount, 30000); // update every 30 seconds
-    </script>
-
   <section id="join">
     <h2>Join the SMP/h2>
     <p>Ready to begin your journey? Connect using the IP below and start your story.</p>
     <ul>
       <li><strong>Server IP:</strong> 4evaSMP.aternos.me</li>
-      <li><strong>Discord:</strong> <a href="https://discord.gg/EzE67C3H2r">Join our community</a></li>
+      <li><strong>Discord:</strong> <a href="https://discord.gg/swvuKrWtpQ">Join our community</a></li>
     </ul>
   </section>
 
